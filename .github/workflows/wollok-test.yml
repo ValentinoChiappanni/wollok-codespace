@@ -1,0 +1,25 @@
+name: Run Wollok Test
+
+on:
+  push:
+    branches:
+      - main  # Cambia esto según tu rama principal
+
+jobs:
+        wollok_test:
+          runs-on: ubuntu-latest
+      
+          steps:
+          - name: Checkout code
+            uses: actions/checkout@v2
+      
+          - name: Set up Wollok CLI
+            run: |
+              mkdir wollok-cli
+              git clone https://github.com/uqbar-project/wollok-cli
+              export PATH="$PATH:./wollok-cli"
+              wollok test
+          
+      
+              
+      
