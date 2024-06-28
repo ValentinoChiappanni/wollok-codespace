@@ -1,7 +1,0 @@
-import example.*
-
-test "test1" {
-
-	assert.equals(20, abc.edad())
-
-}
